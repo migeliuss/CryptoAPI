@@ -48,7 +48,6 @@ class CryptoDataProcessor:
             data = response.json()
             
             if response.status_code == 200:
-                self.cryptocurrencies.clear()
                 for crypto_data in data['data']:
                     crypto = Cryptocurrency(
                         name=crypto_data['name'],
@@ -141,9 +140,9 @@ def show_all_cryptos_pages(processor):
             print(f"{i}. {crypto.name} ({crypto.symbol}): ${crypto.price:,.2f}")
         
         print("\nДействия:")
-        print("n - следующая страница")
-        print("p - предыдущая страница")
-        print("q - вернуться в меню")
+        print("e - следующая страница")
+        print("q - предыдущая страница")
+        print("x - вернуться в меню")
         
         action = input("Выберите действие: ").lower()
         match action:
