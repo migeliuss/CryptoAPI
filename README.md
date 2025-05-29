@@ -1,0 +1,1 @@
+**API fetched from CoinMarketCap**
